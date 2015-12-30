@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">小菜管家</string>
+    <string name="app_slogan">为了更优质的服务</string>
+    <string name="app_version_name">© 校园小菜｜小菜管家</string>
+    <string name="app_school_d">湖北工业大学</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="menu_item_shop_m">店铺管理</string>
+    <string name="menu_item_good_m">商品管理</string>
+    <string name="menu_item_order_m">订单管理</string>
+    <string name="menu_item_news_m">信息发布</string>
+    <string name="menu_item_soft_m">软件相关</string>
+
+    <string name="menu_item_shop_add">创建店铺</string>
+    <string name="menu_item_shop_edit">修改信息</string>
+    <string name="menu_item_shop_push">添加优惠</string>
+
+    <string name="menu_item_ok">确认</string>
+    <string name="menu_item_add">添加</string>
+    <string name="menu_item_edit">编辑</string>
+    <string name="menu_item_search">搜索</string>
+
+    <string name="menu_item_about_update">检查更新</string>
+    <string name="menu_item_about_about">关于软件</string>
+
+    <string name="item_good_stock_format">库存 %d</string>
+    <string name="item_good_sale_volume_format">已售 %d份</string>
+
+    <string name="title_activity_login">登录小菜管家</string>
+    <string name="title_activity_shop_manager">店铺管理</string>
+    <string name="title_activity_good_manager">商品管理</string>
+    <string name="title_activity_order_manager">订单管理</string>
+    <string name="title_activity_news_manager">信息发布</string>
+    <string name="title_activity_soft_manager">软件相关</string>
+    <string name="title_activity_save_shop">创建店铺</string>
+    <string name="title_activity_save_good">添加商品</string>
+    <string name="title_activity_update_shop">修改店铺信息</string>
+    <string name="title_activity_update_good">修改商品信息</string>
+
+    <string name="text_btn_create_shop">立即创建</string>
+    <string name="text_btn_add_good">立即添加</string>
+
+    <string name="format_hint_shop_count" formatted="false">温馨提示：您当前账户 %1s 下共有 %1d 个店铺，请点击列表选择进入店铺管理</string>
+
+    <string name="hint_login">小提示:\n湖工大的学生微商家用户可以直接使用校教务管理平台账号登陆</string>
+    <string name="hint_empty_shop_list">当前还木有创建店铺哦~ T.T</string>
+    <string name="hint_empty_good_list">当前店铺还木有上架任何商品～ T.T</string>
+
+</resources>

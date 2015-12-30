@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:shopmanager="http://schemas.android.com/apk/res-auto"
+    tools:context="com.stone.shopmanager.activity.SaveGoodActivity">
+    <item
+        android:id="@+id/menu_item_save_good"
+        android:title="@string/menu_item_ok"
+        android:icon="@drawable/ic_menu_ok"
+        shopmanager:showAsAction="ifRoom|withText"/>
+</menu>

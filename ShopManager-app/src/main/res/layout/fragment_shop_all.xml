@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/lv_shop_all_swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:overScrollMode="always" >
+
+        <ListView
+            android:id="@+id/lv_shop_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="8dp"
+            android:divider="@drawable/divide_15_top_bottom"
+            android:smoothScrollbar="true" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_shop_list_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_shop_create"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:text="@string/text_btn_create_shop" />
+
+        <TextView
+            android:id="@+id/tv_shop_list_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@id/btn_shop_create"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/color_bule"
+            android:text="@string/hint_empty_shop_list" />
+
+    </RelativeLayout>
+
+</LinearLayout>

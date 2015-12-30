@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="30dp">
+
+    <Button
+        android:id="@+id/btn_m_good"
+        style="@style/menu_text_style"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bg"
+        android:text="商 品管 理" />
+
+    <Button
+        android:id="@+id/btn_m_order"
+        style="@style/menu_text_style"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@id/btn_m_good"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg"
+        android:text="订 单管 理" />
+
+</RelativeLayout>

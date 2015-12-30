@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stone.shopmanager"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <!-- BmobPush SDK权限 -->
+    <permission
+        android:protectionLevel="normal"
+        android:name="cn.bmob.permission.push"></permission>
+
+    <!-- 添加自定义的权限-->
+    <uses-permission android:name="cn.bmob.permission.push" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <application
+        android:name=".application.ShopManagerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme">
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/AppThemeNoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"></activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".activity.OldHomeActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".activity.ShopManagerActivity"
+            android:label="@string/title_activity_shop_manager"></activity>
+        <activity
+            android:name=".activity.GoodManagerActivity"
+            android:label="@string/title_activity_good_manager"></activity>
+        <activity
+            android:name=".activity.OrderManagerActivity"
+            android:label="@string/title_activity_order_manager"></activity>
+        <activity
+            android:name=".activity.NewsManagerActivity"
+            android:label="@string/title_activity_news_manager"></activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_soft_manager"></activity>
+        <activity
+            android:name=".activity.SaveShopActivity"
+            android:label="@string/title_activity_save_shop"></activity>
+        <activity
+            android:name=".activity.SaveGoodActivity"
+            android:label="@string/title_activity_save_good"></activity>
+        <activity
+            android:name=".activity.AddNewsActivity"
+            android:label="@string/app_name"></activity>
+
+        <!-- Bmob Version Update -->
+        <activity
+            android:name="cn.bmob.v3.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <!-- Bmob Version Update -->
+
+
+        <!-- Bmob Push -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:permission="cn.bmob.permission.push"
+            android:process="cn.bmob.push">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter android:priority="2147483647"> <!-- 优先级加最高 -->
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 第四部中创建的消息接收器，在这里进行注册 -->
+        <receiver android:name=".receiver.PushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+        <!-- Bmob Push -->
+
+        <!-- umeng sdk -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="546619d2fd98c56b77006222"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="XiaoCaiGuanJia" />
+        <!-- umeng sdk -->
+
+        <meta-data
+            android:name="BMOB_CHANNEL"
+            android:value="wandoujia" />
+
+    </application>
+
+</manifest>
